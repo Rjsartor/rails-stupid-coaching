@@ -1,0 +1,27 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Archivo" rel="application">
+</head>
+
+<body>
+
+<h1>My Dad's Wisdom</h1>
+
+<div class="quest">
+  <p><%= @question %></p>
+</div>
+  <div class="answer">
+
+
+ <% if @question == "I am going to work!" %>
+  <p> Dad says: <%="Great!" %></p>
+    <% elsif @question.include? "?" %>
+  <p>Dad says: <%= "Silly question, get dressed and go to work!" %> </p>
+  <% else %>
+    <p>Dad says: <%= "I don't care, get dressed and go to work!" %></p>
+  <% end %>
+
+</div>
+
+<h3><%= link_to "Ask me something else, dumbass.", "/ask" %></h3>
+
+</body>
